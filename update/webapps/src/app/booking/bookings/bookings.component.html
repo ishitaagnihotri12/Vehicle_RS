@@ -1,0 +1,57 @@
+
+<h2 class="heading " style="text-align: center;">Booking Details </h2>
+<div class="row  ml-2 mr-2 " *ngIf="bookingsService.bookingsEmpty">
+
+		<div class="col-lg-9   mx-auto">
+
+			<div class="alert alert-danger">You have not booked anything yet!.You are just a click away.. <a class="list" routerLink="/search-bar" >Vehicle</a>.</div>
+
+		</div>
+
+
+	</div>
+
+<div class="row list-group ml-2 mr-2 " *ngIf="!bookingsService.bookingsEmpty">
+      
+			<div  class="col-lg-9 list-group-item  mx-auto" >
+				<div class="row" >
+					<div class=col-3>
+					<h4 class="grey">{{bookingsService.bookings.vehicle.name}}</h4></div>
+					<div class="col-3">
+						<h6>Booking Start Date</h6>
+						<p>{{bookingsService.bookings.bookingStart| date:'mediumDate'}}</p>
+					</div>
+					<div class="col-3">
+							<h6>Booking End Date</h6>
+							<p>{{bookingsService.bookings.bookingEnd| date:'mediumDate'}}</p>
+						</div>
+						<div class="ml-auto">
+								<button type="button" class="btn btn-danger" (click)="this.vehicleService.removeFromBookings(bookingsService.bookings.vehicle.id)" > <i
+									class="material-icons md-30 white "> delete_sweep </i>Cancel
+								</button>
+							</div>
+				</div>
+			</div>
+
+
+			<div class="col-lg-9 list-group-item  mx-auto ">
+				<div class="row">
+					<div class="col-4">
+					<h4>Total Cost of Booking</h4></div>
+					<div class="col-4">
+					
+					<div class=" ml-auto">
+						<h5 class="text-color">	{{bookingsService.bookings.price | currency:'USD'}}</h5>
+						<button type="button" class="btn btn-warning" (click)="pay()">  <i
+						class="material-icons md-30 white "> payment </i> Pay Now</button>
+					</div>
+					
+							
+					
+				</div>
+
+			</div>
+			</div>
+
+
+ 

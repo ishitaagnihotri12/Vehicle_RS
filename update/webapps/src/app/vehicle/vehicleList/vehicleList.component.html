@@ -1,0 +1,56 @@
+<div class="container col-1" style="float: right;">
+  <div class="input-group ">
+    <div class="input-group-prepend ">
+      <label class="input-group-text green lighten-3"><i
+          class="material-icons text-light">sort</i>
+     
+    <select class="form-control input-group-text green" style="color: black;font-size: large; font-weight: bold;" id="seater" name="sorting" [(ngModel)]="sortkey" (ngModelChange)="sortFunction()">
+      <option value="" selected>Sort By:</option>
+      <option value="seater">Seater</option>
+      <option value="type">Type</option>
+      <option value="price">Price</option>
+    </select>
+  </label>
+</div>
+  </div>
+</div>
+
+<div class="card-deck margin">
+
+  <div class="ml-5 mr-5" *ngFor="let item of vehicleItem">
+    <app-item-info [vehicleItem]="item" (deleteVehicleClicked)="deleteVehicle($event)"></app-item-info>
+  </div>
+
+</div>
+
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br>
+
+<div  class="header">
+<h1 style="color: rgb(70, 6, 6);" style="text-align: center;">Contact Us</h1>
+</div>
+<div  class="container mt-5 mb-5">
+
+    <div class="box">
+        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+        <div class='details'><h3>Hyderabad,India</h3></div>
+    </div>
+    
+    <div class="box">
+        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+        <div class='details'><h3>+91 8299716685</h3></div>
+    </div>
+    
+    <div class="box">
+        <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+        <div class='details'><h3>vehicleinfo@vrs.com</h3></div>
+    </div>
+</div>
+
