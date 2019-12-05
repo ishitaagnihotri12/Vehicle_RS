@@ -6,7 +6,7 @@ The project helps the people who are planning to go out on weekends on long trip
 It will provide us a high secured environment as well as better opportunity to serve the person in need. 
 
 Vehicle Reservation System has the ability to register many users and makes easier to find the vehicles available according to their requirement and able to book vehicle online.
-•	User registration & validation
-•	Approved user able to book vehicle and pay bill.
-•	Fetching user and vehicle details in database.
-•	Displaying new vehicle added according to availability.
+1.	User registration & validation
+1.	Approved user able to book vehicle and pay bill.
+1.	Fetching user and vehicle details in database.
+1.	Displaying new vehicle added according to availability.
